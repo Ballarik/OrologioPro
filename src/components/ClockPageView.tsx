@@ -55,7 +55,7 @@ export function ClockPageView({ mode }: ClockPageViewProps) {
 
   return (
     <main className="flex min-h-dvh w-full flex-col items-center gap-6 bg-[var(--app-bg)] px-4 pt-6 pb-4 text-[var(--app-text)] transition-colors duration-300 sm:px-8 sm:pt-8 sm:pb-6">
-      <div className="flex w-full max-w-[760px] flex-1 items-center justify-center py-4">
+      <div className="flex w-full max-w-6xl flex-1 items-center justify-center py-4">
         <ClockDisplay colorHex={clockColor.hex} mounted={mounted} />
       </div>
 

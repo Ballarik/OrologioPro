@@ -42,18 +42,18 @@ export function ClockDisplay({
   const isVisible = mounted && time !== null;
   const display = time ?? { hours: "00", minutes: "00", seconds: "00" };
 
-  const sizeClass =
+  const fontSize =
     size === "hero"
-      ? "text-[clamp(3.5rem,15vw,10.5rem)] leading-none"
-      : "text-[clamp(2.25rem,7vw,4rem)] leading-none";
+      ? "clamp(3.5rem, min(17.5vw, 32dvh), 13.5rem)"
+      : "clamp(2.5rem, 7.5vw, 4.5rem)";
 
   return (
     <time
       aria-label="Orologio 24 ore"
-      className={`inline-flex items-baseline justify-center font-bold tracking-[-0.03em] tabular-nums select-none transition-colors duration-300 ${sizeClass} ${
+      className={`inline-flex items-baseline justify-center leading-none font-bold tracking-[-0.03em] tabular-nums select-none transition-colors duration-300 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
-      style={{ color: colorHex }}
+      style={{ color: colorHex, fontSize }}
     >
       <span className="inline-block w-[2.1ch] text-center">{display.hours}</span>
       <span className="inline-block px-[0.06em] opacity-85">:</span>
