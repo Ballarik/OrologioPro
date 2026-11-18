@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root,
+html[data-theme="light"] {
+  --app-bg: #ffffff;
+  --app-surface: #f4f4f5;
+  --app-surface-subtle: #fafafa;
+  --app-border: #e4e4e7;
+  --app-text: #18181b;
+  --app-muted: #71717a;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --app-bg: #09090b;
+  --app-surface: #141418;
+  --app-surface-subtle: #111115;
+  --app-border: #27272a;
+  --app-text: #fafafa;
+  --app-muted: #a1a1aa;
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes orologio-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-orologio-marquee {
+  animation-name: orologio-marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
