@@ -337,7 +337,7 @@ export function SettingsView() {
                 mounted={mounted}
               />
             </div>
-            <div className="flex w-full max-w-xl shrink-0 flex-col items-center gap-1.5">
+            <div className="flex w-full max-w-xl shrink-0 flex-col items-center gap-0">
               <BannerSlot banner={previewBanner} compact />
               <MarqueeText text={settings.scrollText} />
             </div>

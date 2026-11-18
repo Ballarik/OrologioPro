@@ -60,7 +60,7 @@ export function ClockPageView({ mode }: ClockPageViewProps) {
       </div>
 
       <section
-        className={`flex w-full max-w-[760px] shrink-0 flex-col items-center gap-2 transition-opacity duration-200 ${
+        className={`flex w-full max-w-[760px] shrink-0 flex-col items-center gap-0 transition-opacity duration-200 ${
           mounted ? "opacity-100" : "opacity-0"
         }`}
         aria-label="Spazio pubblicitario"

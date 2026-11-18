@@ -51,7 +51,7 @@ export function MarqueeText({ text }: MarqueeTextProps) {
   return (
     <div
       ref={containerRef}
-      className="w-full overflow-hidden py-2"
+      className="w-full overflow-hidden py-0"
       style={{
         maskImage:
           "linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%)",
@@ -61,7 +61,7 @@ export function MarqueeText({ text }: MarqueeTextProps) {
       aria-live="off"
     >
       <div
-        className="animate-orologio-marquee flex w-max items-center whitespace-nowrap text-sm font-medium text-[var(--app-muted)] sm:text-base"
+        className="animate-orologio-marquee flex w-max items-center whitespace-nowrap text-sm leading-snug font-medium text-[var(--app-muted)] sm:text-base"
         style={{
           animationDuration: `${metrics.durationSec.toFixed(2)}s`,
         }}
