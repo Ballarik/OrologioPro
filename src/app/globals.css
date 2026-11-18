@@ -8,6 +8,7 @@ html[data-theme="light"] {
   --app-border: #e4e4e7;
   --app-text: #18181b;
   --app-muted: #71717a;
+  --app-subtitle: #9ca3af;
   color-scheme: light;
 }
 
@@ -18,6 +19,7 @@ html[data-theme="dark"] {
   --app-border: #27272a;
   --app-text: #fafafa;
   --app-muted: #a1a1aa;
+  --app-subtitle: #d4d4d8;
   color-scheme: dark;
 }
 
