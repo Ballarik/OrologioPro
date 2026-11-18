@@ -61,7 +61,7 @@ export function MarqueeText({ text }: MarqueeTextProps) {
       aria-live="off"
     >
       <div
-        className="animate-orologio-marquee flex w-max items-center whitespace-nowrap text-sm leading-snug font-medium text-[var(--app-muted)] sm:text-base"
+        className="animate-orologio-marquee flex w-max items-center whitespace-nowrap text-[11px] leading-tight font-medium text-[var(--app-muted)] sm:text-xs"
         style={{
           animationDuration: `${metrics.durationSec.toFixed(2)}s`,
         }}
