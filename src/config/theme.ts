@@ -66,6 +66,7 @@ export const MAX_SCROLL_TEXT_LENGTH = 5000;
 export const DEFAULT_SCROLL_TEXT =
   "Benvenuto su OrologioPro — Per personalizzare questo testo scorrevole, scegliere i banner pubblicitari, il colore dell'orologio e lo sfondo chiaro/scuro, visita /settings su questo dispositivo.";
 export const BANNER_ROTATION_INTERVAL_MS = 5 * 60 * 1000;
+export const SWAP_INTERVAL_MS = 20 * 60 * 1000;
 
 export function getClockColor(id: string): ClockColorOption {
   return CLOCK_COLORS.find((color) => color.id === id) ?? CLOCK_COLORS[0];
