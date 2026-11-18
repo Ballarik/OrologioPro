@@ -324,18 +324,20 @@ export function SettingsView() {
           </div>
 
           <div
-            className="flex flex-col items-center gap-6 rounded-2xl border border-[var(--app-border)] px-5 py-8 transition-colors duration-300"
+            className="flex min-h-[260px] flex-col items-center justify-between gap-6 rounded-2xl border border-[var(--app-border)] px-5 pt-8 pb-4 transition-colors duration-300 sm:min-h-[300px]"
             style={{
               backgroundColor: activeBackground.bg,
               color: activeBackground.text,
             }}
           >
-            <ClockDisplay
-              colorHex={activeClockColor.hex}
-              size="preview"
-              mounted={mounted}
-            />
-            <div className="flex w-full max-w-xl flex-col items-center gap-1.5">
+            <div className="flex flex-1 items-center justify-center">
+              <ClockDisplay
+                colorHex={activeClockColor.hex}
+                size="preview"
+                mounted={mounted}
+              />
+            </div>
+            <div className="flex w-full max-w-xl shrink-0 flex-col items-center gap-1.5">
               <BannerSlot banner={previewBanner} compact />
               <MarqueeText text={settings.scrollText} />
             </div>

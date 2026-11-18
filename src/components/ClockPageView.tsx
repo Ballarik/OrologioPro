@@ -54,23 +54,21 @@ export function ClockPageView({ mode }: ClockPageViewProps) {
   const clockColor = getClockColor(settings.clockColorId);
 
   return (
-    <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-[var(--app-bg)] px-4 py-8 text-[var(--app-text)] transition-colors duration-300 sm:px-8">
-      <div className="flex w-full max-w-[760px] flex-col items-center gap-10 sm:gap-14">
-        <div className="flex w-full items-center justify-center py-4 sm:py-8">
-          <ClockDisplay colorHex={clockColor.hex} mounted={mounted} />
-        </div>
-
-        <section
-          className={`flex w-full flex-col items-center gap-2 transition-opacity duration-200 ${
-            mounted ? "opacity-100" : "opacity-0"
-          }`}
-          aria-label="Spazio pubblicitario"
-        >
-          <BannerSlot banner={activeBanner} />
-
-          {mode === "fake" && <MarqueeText text={settings.scrollText} />}
-        </section>
+    <main className="flex min-h-dvh w-full flex-col items-center gap-6 bg-[var(--app-bg)] px-4 pt-6 pb-4 text-[var(--app-text)] transition-colors duration-300 sm:px-8 sm:pt-8 sm:pb-6">
+      <div className="flex w-full max-w-[760px] flex-1 items-center justify-center py-4">
+        <ClockDisplay colorHex={clockColor.hex} mounted={mounted} />
       </div>
+
+      <section
+        className={`flex w-full max-w-[760px] shrink-0 flex-col items-center gap-2 transition-opacity duration-200 ${
+          mounted ? "opacity-100" : "opacity-0"
+        }`}
+        aria-label="Spazio pubblicitario"
+      >
+        <BannerSlot banner={activeBanner} />
+
+        {mode === "fake" && <MarqueeText text={settings.scrollText} />}
+      </section>
     </main>
   );
 }
